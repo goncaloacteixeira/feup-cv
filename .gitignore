@@ -133,3 +133,8 @@ dmypy.json
 
 # IDEA
 .idea/
+
+ex_first_part/*.jpg
+ex_first_part/*.jpeg
+ex_first_part/*.png
+ex_first_part/*.bmp
