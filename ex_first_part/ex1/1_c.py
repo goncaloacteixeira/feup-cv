@@ -1,6 +1,6 @@
 import cv2 as cv
 
-img = cv.imread('test.jpg')
+img = cv.imread('../ex2/test.jpg')
 img_copy = img.copy()
 
 
@@ -10,7 +10,7 @@ def mouse_event(event, x, y, flags, params):
     if event == cv.EVENT_MOUSEMOVE:
         font = cv.FONT_HERSHEY_SIMPLEX
         b, g, r = img[y, x]
-        cv.putText(img, "{},{},{}".format(r, g, b), (x, y), font, 1, (255, 0, 0), 2)
+        cv.putText(img, "{},{},{}".format(r, g, b), (x, y), font, 0.5, (255, 0, 0), 2)
         cv.imshow('Computer Vision - Ex1 c', img)
     if event == cv.EVENT_LBUTTONUP:
         b, g, r = img[y, x]

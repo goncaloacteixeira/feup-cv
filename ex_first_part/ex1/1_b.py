@@ -1,5 +1,5 @@
 import cv2 as cv
 
-img = cv.imread('test.jpg')
+img = cv.imread('../ex2/test.jpg')
 
 cv.imwrite('test.bmp', img)

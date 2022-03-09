@@ -1,6 +1,6 @@
 import cv2 as cv
 
-img = cv.imread('test.jpg')
+img = cv.imread('../ex2/test.jpg')
 first = True
 top_left = (0, 0)
 bottom_right = (0, 0)
@@ -9,7 +9,7 @@ bottom_right = (0, 0)
 def export_roi():
     global top_left, bottom_right, img
     roi = img[top_left[1]:bottom_right[1], top_left[0]:bottom_right[0]]
-    cv.imwrite('roi.jpg', roi)
+    cv.imwrite('../roi.jpg', roi)
     print("ROI Created on roi.jpg!")
 
 
