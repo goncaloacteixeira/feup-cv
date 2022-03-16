@@ -8,7 +8,7 @@ nRows, nCols, nChannels = img.shape
 if nChannels > 1:
     img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
-nNoisePixels = np.random.randint(nRows * nCols / 100, nRows * nCols / 80)
+nNoisePixels = int(nRows * nCols * 0.1)
 
 for _ in range(nNoisePixels):
     row, col = (np.random.randint(0, nRows), np.random.randint(0, nCols))
@@ -19,6 +19,7 @@ for _ in range(nNoisePixels):
         img[row, col] = 255
 
 cv.imshow("Image", img)
+cv.imwrite("../noisy.jpg", img)
 
 cv.waitKey(0)
 
